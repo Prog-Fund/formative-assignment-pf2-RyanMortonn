@@ -178,4 +178,21 @@ class ProductTest {
             assertTrue(toStringContents.contains("currently in product line: N"));
         }
     }
+    private int productCode ;
+    // valid values 1000 - 5000 inclusive - default value is 5000
+
+    private int productCode = 5000;
+
+    public void setProductCode(int productCode) {
+        if ((productCode >= 1000) && (productCode <= 5000)) {
+            this.productCode = productCode;
+        }
+    }
+
+    public Product(String productName, int productCode, double unitCost, boolean inCurrentProductLine) {
+        setProductCode(productCode);
+        this.productName = productName;
+        this.unitCost = unitCost;
+        this.inCurrentProductLine = inCurrentProductLine;
+    }
 }
