@@ -1,7 +1,7 @@
 /**
  * A scaled down version of a Product class.
  *
- * @author Mairead Meagher, Siobhan Drohan
+ * @author Mairead Meagher, Siobhan Drohan, Siobhan Roche
  */
 public class Product {
 
