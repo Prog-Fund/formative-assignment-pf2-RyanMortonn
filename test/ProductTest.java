@@ -27,7 +27,7 @@ class ProductTest {
     }
 
     @Nested
-    class ContructorAndGetterTests{
+    class ContructorAndGetterTests {
 
         @Test
         void boundaryTestsForProductNameValidation() {
@@ -76,11 +76,11 @@ class ProductTest {
             // These tests check that the field was updated in the constructor.
 
             //These products should be in the current product line
-            assertTrue( tv42Inches.isInCurrentProductLine());
-            assertTrue( tv50Inches.isInCurrentProductLine());
+            assertTrue(tv42Inches.isInCurrentProductLine());
+            assertTrue(tv50Inches.isInCurrentProductLine());
             //These products should NOT be in the current product line
-            assertFalse( tv60Inches.isInCurrentProductLine());
-            assertFalse( noNameProduct.isInCurrentProductLine());
+            assertFalse(tv60Inches.isInCurrentProductLine());
+            assertFalse(noNameProduct.isInCurrentProductLine());
         }
     }
 
@@ -178,6 +178,7 @@ class ProductTest {
             assertTrue(toStringContents.contains("currently in product line: N"));
         }
     }
+
     public class Product {
 
         private String productName = "";
@@ -188,22 +189,22 @@ class ProductTest {
         public Product(String productName, int productCode, double unitCost, boolean inCurrentProductLine) {
             setProductCode(productCode);
 
-            if (productName != null){
+            if (productName != null) {
                 if (productName.length() <= 20)
                     this.productName = productName;
                 else
-                    this.productName = productName.substring(0,20);
+                    this.productName = productName.substring(0, 20);
             }
 
             setUnitCost(unitCost);
             this.inCurrentProductLine = inCurrentProductLine;
         }
 
-        public String getProductName(){
+        public String getProductName() {
             return productName;
         }
 
-        public double getUnitCost(){
+        public double getUnitCost() {
             return unitCost;
         }
 
@@ -222,7 +223,7 @@ class ProductTest {
         }
 
         public void setProductName(String productName) {
-            if (productName != null){
+            if (productName != null) {
                 if (productName.length() <= 20) {
                     this.productName = productName;
                 }
@@ -247,3 +248,4 @@ class ProductTest {
         }
 
     }
+}
